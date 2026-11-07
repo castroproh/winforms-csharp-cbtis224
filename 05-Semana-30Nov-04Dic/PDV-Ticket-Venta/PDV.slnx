@@ -1,0 +1,6 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+  </Configurations>
+  <Project Path="PDV/PDV.csproj" />
+</Solution>

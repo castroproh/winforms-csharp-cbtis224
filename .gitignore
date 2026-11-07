@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Compilación
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.pdb
+*.exe
+
+# NuGet
+packages/
+*.nupkg
+
+# Sistema
+.DS_Store
+__MACOSX/
+Thumbs.db
