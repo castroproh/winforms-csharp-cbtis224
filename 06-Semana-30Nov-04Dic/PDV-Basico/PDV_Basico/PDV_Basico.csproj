@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>PDV</RootNamespace>
+    <AssemblyName>PDV_Basico</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="FormVenta.Designer.cs">
+      <DependentUpon>FormVenta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="FormVenta.resx">
+      <DependentUpon>FormVenta.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

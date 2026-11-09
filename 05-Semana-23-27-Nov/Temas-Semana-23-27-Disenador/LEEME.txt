@@ -1,0 +1,38 @@
+TEMAS-SEMANA-23-27  (Windows Forms, C#, .NET 8, net8.0-windows)
+==============================================================
+
+Cómo abrirlo
+  1. Descomprime el ZIP.
+  2. Abre Temas-Semana-23-27.sln con Visual Studio 2022 (con la carga de trabajo
+     "Desarrollo de escritorio con .NET").
+  3. Pulsa F5. Aparece el menú principal (Form1) con un botón por tema.
+
+Temas
+  21  FormKeyDown      KeyDown con KeyPreview = true. Un Label muestra la tecla presionada.
+                       F2 nuevo | F3 buscar | F4 editar seleccionado | F5 actualizar lista
+                       Supr eliminar | Ctrl+D duplicar | F9 cobrar (subtotal, IVA, total)
+  22  DataGridView_1   Clase Producto + List<Producto> asignada a dataGridView1.DataSource.
+  24  FormCatalogo     Catálogo en DataGridView con búsqueda por nombre (ignora mayúsculas y acentos).
+  25  FormEdicion      Agregar, Editar, Eliminar, Limpiar campos y Limpiar filas.
+                       Totales: subtotal, IVA 16% y total.
+
+Características
+  - Ahora los controles están en los archivos .Designer.cs (un FormX.Designer.cs por formulario,
+    con InitializeComponent), como en el Diseñador de Visual Studio; los .cs solo tienen la lógica.
+    Siguen sin existir archivos .resx. Lo que se queda en el .cs: las imágenes dibujadas con GDI+,
+    el DataSource / BindingList, las categorías del ComboBox y el formato de moneda de las columnas.
+  - Las imágenes (letrero e iconos) se dibujan con GDI+ en Dibujo.cs; no hay archivos externos.
+  - Los datos de ejemplo (tienda de abarrotes) están en DatosTienda.cs.
+  - La validación está en Validacion.cs: TryParse para precio y cantidad, campos vacíos no
+    permitidos, y MessageBox para avisar. Las acciones también van dentro de try/catch.
+
+Interpretaciones que tomé (revisa si coinciden con los apuntes de la maestra)
+  - Los apuntes no llegaron adjuntos, así que el código sigue las convenciones normales de
+    Windows Forms y no el código literal de la maestra.
+  - Tema 21: la lista del ejemplo es de productos de la tienda. La tecla Supr no elimina
+    productos si el cursor está dentro de una caja de texto (ahí sirve para borrar letras).
+  - Tema 22: "Clase DataGridView_1" lo tomé como el nombre del formulario que muestra la
+    clase Producto con su lista.
+  - Tema 25: "limpiar filas" son dos botones: "Limpiar campos" (vacía las cajas de texto)
+    y "Limpiar filas" (quita todas las filas de la tabla, con confirmación).
+  - Cantidad: entero de 1 a 100,000. Precio: mayor que 0 y hasta 1,000,000.
